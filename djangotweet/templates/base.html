@@ -33,6 +33,18 @@
               <a class="nav-link" href="{% url 'tweetapp:addtweetbymodelform' %}">Add Tweet By Model Form</a>
             </li>
             -->
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+              <form action="{% url 'logout' %}?next=/" method="POST">
+                {%csrf_token%}
+                <button type="submit" class="nav-link btn btn-link">Logout</button> 
+              </form>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'tweetapp:signup' %}">Signup</a>
+            </li>
               
             </ul>
             
